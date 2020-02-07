@@ -290,13 +290,13 @@ class qtViewer3d(qtBaseViewer):
             self._zoom_area = True
             self.cursor = "zoom-area"
             self.DrawBox(evt)
-            self.update()
+            self.updateGL()
         # SELECT AREA
         elif (buttons == QtCore.Qt.LeftButton and
               modifiers == QtCore.Qt.ShiftModifier):
             self._select_area = True
             self.DrawBox(evt)
-            self.update()
+            self.updateGL()
         else:
             self._drawbox = False
             self._display.MoveTo(pt.x(), pt.y())
